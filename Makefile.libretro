@@ -124,10 +124,10 @@ else ifeq ($(platform), psl1ght)
 
 # PSP
 else ifeq ($(platform), psp1)
-	TARGET := $(TARGET_NAME)_libretro_psp1.a$(EXE_EXT)
+	TARGET := $(TARGET_NAME)_libretro_psp1.a
 	CC = psp-gcc$(EXE_EXT)
 	AR = psp-ar$(EXE_EXT)
-	ENDIANNESS_DEFINES := -DLSB_FIRST -DBYTE_ORDER=LITTLE_ENDIAN
+	ENDIANNESS_DEFINES := -DLSB_FIRST -DBYTE_ORDER=LITTLE_ENDIAN -DALIGN_LONG
 	PLATFORM_DEFINES := -DPSP
 	CFLAGS += -G0
 	STATIC_LINKING = 1
